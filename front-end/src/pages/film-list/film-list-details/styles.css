@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+div.film-list-details {
+    padding-bottom: 1rem;
+}
+
+.notification-text {
+    margin-left: 1rem;
+    font-family: 'Open Sans';
+    font-weight: 700;
+}

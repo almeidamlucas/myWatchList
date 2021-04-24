@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.film-details-link {
+    text-decoration: none;
+    color: black;
+}
+
+.film-card{
+    display: flex;
+    flex-direction: column;
+    border: rgba(0, 0, 0, 0.3) 1px solid; 
+    border-radius: 0 0 7px 7px;
+    transition: box-shadow 0.25s;
+}
+
+.film-card:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px black;
+}
+
+.film-card img {
+    width: 100%;
+    height: 15rem;
+}
+
+.film-info {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.film-info strong {
+    font-size: 0.9rem;
+    text-align: center;
+    font-family: 'Open Sans';
+}
+.film-info p {
+     font-size: 0.9rem  ;
+     font-family: 'Open Sans';
+     font-weight: 600;
+ }
+
+ @media (max-width: 500px) {
+    .film-card{
+        height: 70vh
+    }
+
+    .film-card img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .film-info strong {
+        font-size: 1.4rem;
+    }
+    .film-info p {
+         font-size: 1.4rem;
+     }
+ } 

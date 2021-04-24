@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+h1, h2, h3, h4, p {
+    font-family: 'Open Sans';
+}
+
+div.film-details {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+}
+
+div.film-details aside {
+    margin-right: 1.25rem;
+}
+
+div.film-details aside img{
+    width: 18.8rem;
+    height: 27.7rem;
+}
+
+div.film-details aside .run-time {
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+div.film-details .film-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+div.film-details .film-data .title{
+    text-align: end;
+    margin-bottom: 1.3rem;
+}
+
+div.film-details .film-data .title h1{
+    font-size: 3rem;
+}
+
+
+div.film-details .film-data .plot {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: end;
+}
+
+div.film-details .film-data .plot p{
+    line-height: 1.3rem;
+}
+
+
+div.film-details .film-data .genre-list {
+    display: flex;
+    flex-direction: row;
+}
+
+div.film-details .film-data .genre-list p{
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 0.2rem 0.6rem;
+}
+
+div.film-details .film-data .genre-list p:not(:last-child){
+    margin-right: 1rem;
+}
+
+div.film-details .film-data .run-time-small {
+    display: none;
+}
+
+div.film-details .film-data .cast {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    text-align: end;
+}
+
+div.film-details .film-data .cast h4{
+    margin-right: 0.3rem;
+}
+
+div.film-details .film-data .directed-by {
+    display: flex;
+    flex-direction: row;
+    text-align: end;
+}
+
+div.film-details .film-data .directed-by h4{
+    margin-right: 0.3rem;
+}
+
+div.film-details .film-data .details-buttons {
+    margin-top: 3rem;
+}
+
+div.film-details .film-data .details-buttons button{
+    padding: 0.8rem 1.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.film-details .film-data .details-buttons .back-button{
+    font-size: 1rem;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    background-color: #333333;
+    border: none;
+    color: white;
+    border: solid 2px black;
+    margin-right: 2rem;
+    transition: background-color 0.2s, border 0.2s
+}
+
+div.film-details .film-data .details-buttons .back-button:hover{
+    background-color: #1d1d1d;
+    color: white;
+    border: solid 2px black;
+}
+
+div.film-details .film-data .details-buttons .add-button{
+    font-size: 1rem;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    background-color: white;
+    border: solid 2px black;
+    color: black;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+
+div.film-details .film-data .details-buttons .add-button:hover{
+    background-color: rgb(253, 85, 13);
+    color: white;
+    border: solid 2px  rgb(253, 85, 13);
+}
+
+div.film-details .film-data .details-buttons .added-button{
+    padding: 0.8rem 1.1rem;
+    font-size: 1rem;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    background-color:green;
+    color: white;
+    border: solid 2px green;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+    cursor: default;
+}
+
+div.film-details .film-data .details-buttons .remove-button{
+    padding: 0.8rem 1.1rem;
+    font-size: 1rem;
+    font-family: 'Open Sans';
+    font-weight: bold;
+    background-color: #2976b2;
+    color: white;
+    border: solid 2px #2976b2;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+div.film-details .film-data .details-buttons .remove-button:hover{
+    background-color: #0a5996;
+    border: solid 2px #0a5996;
+}
+
+
+.loading-div{
+    width: 100%;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+i.loading-data {
+    text-align: center;
+    font-size: 4.3rem
+}
+
+/*Media Querys*/
+
+@media(max-width: 1100px) {
+    div.film-details {
+        padding: 0 1rem;
+    }
+}
+
+@media(max-width: 980px) {
+    div.film-details .film-data .title h1{
+        font-size: 2.5rem;
+    }
+
+    div.film-details .film-data .genre-list p{
+        font-size: 0.8rem;
+    }
+}
+
+@media(max-width: 880px) {
+
+
+    div.film-details .film-data .title h1{
+        font-size: 2.3rem;
+    }
+
+    div.film-details .film-data .title h3{
+        font-size: 1rem;
+    }
+
+    div.film-details .film-data .genre-list p{
+        font-size: 0.8rem;
+    }
+
+    div.film-details aside img{
+        width: 16rem;
+        height: 25rem;
+    }
+
+    div.film-details aside .run-time h3{
+        font-size: 1rem;
+    }
+
+    div.film-details .film-data .genre-list {
+        flex-wrap: wrap;
+    }
+
+    div.film-details .film-data .genre-list p{
+        margin-bottom: 0.8rem;
+    }
+
+    div.film-details .film-data .plot p{
+        line-height: 1.05rem;
+        font-size: 0.9rem;
+    }
+
+    div.film-details .film-data h3{
+        font-size: 1rem;
+    }
+
+    div.film-details .film-data .cast h4, p{
+        font-size: 0.95rem;
+    }
+
+    div.film-details .film-data .directed-by h4, p{
+        font-size: 0.95rem;
+    }
+
+    div.film-details .film-data .details-buttons button{
+        padding: 0.7rem 1.6rem;
+    }
+
+    div.film-details .film-data .details-buttons .back-button{
+        font-size: 0.85rem;
+    }
+
+    div.film-details .film-data .details-buttons .add-button{
+        font-size: 0.85rem;
+    }
+}
+
+@media(max-width: 750px) {
+    div.film-details aside img{
+        width: 10rem;
+        height: 16rem;
+    }
+
+    div.film-details aside .run-time h3{
+        display: none;
+    }
+
+    div.film-details .film-data .run-time-small {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+        width: 15rem;
+    }
+}
+
+@media(max-width: 655px) {
+    div aside {
+        display: none;
+    }
+
+    div.film-details .film-data {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    div.film-details .film-data .title{
+        text-align: left;
+        margin-bottom: 1.3rem;
+    }
+
+    div.film-details .film-data .plot {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+
+    div.film-details .film-data .cast {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: row;
+        text-align: end;
+    }
+}

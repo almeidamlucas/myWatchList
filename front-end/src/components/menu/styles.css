@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+header {
+    width: 100%;
+    height: 4rem;
+    margin-bottom: 1rem;   
+}
+
+header nav {
+    height: 100%;
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    background-color: #333333;
+}
+
+header nav div.app-logo {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header nav div.app-logo h1 {
+    margin-right: 0.76rem;
+    color: white;
+    font-size: 1.75em;
+    font-family: 'Open Sans';
+}
+
+header nav div.app-logo i {
+    color: white;
+    font-size: 1.95em;
+}
+
+header nav div.nav-items {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+header nav div.nav-items li {
+    list-style: none;
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Open Sans';
+    transition: color 0.3s;
+}
+
+.menuOption {
+    text-decoration: none;
+    color: rgb(195, 195, 195);
+}
+
+.menuOption:hover {
+    color: white;
+}
+
+.selectedTab {
+    color: white;
+}
+
+header nav div.nav-items li:first-child {
+    margin-right: 3rem;
+}
+
+
+/*Media Queries*/
+
+@media(max-width: 700px) {
+    header nav {
+        padding: 0 1.5rem;
+    }
+
+    header nav div.app-logo h1 {
+        font-size: 1.3em;
+        margin-right: 0.65rem;
+    }
+
+    header nav div.app-logo i {
+        font-size: 1.5em;
+    }
+
+    header nav div.nav-items li {
+        font-size: 1.3em;
+    }
+
+    header nav div.nav-items li:first-child {
+        margin-right: 2rem;
+    }
+}
+
+
+@media(max-width: 500px) {
+    header nav {
+        padding: 0 1.3rem;
+    }
+
+    header nav div.app-logo h1 {
+        font-size: 1em;
+        margin-right: 0.5em;
+    }
+
+    header nav div.app-logo i {
+        font-size: 1.2em;
+    }
+
+    header nav div.nav-items li {
+        font-size: 1em;
+    }
+
+    header nav div.nav-items li:first-child {
+        margin-right: 1.5rem;
+    } 
+}
