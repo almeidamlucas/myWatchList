@@ -20,7 +20,7 @@ function FilmListDetails(props) {
 
             api.get(`/film-list/select/movie/${movieId}`)
                 .then(async result => {
-                    if (result.data.Response === "False") {
+                    if (!result.data) {
                         toast.warning(notificationText('fas fa-exclamation-triangle', 'No data available'), {
                             position: "top-right",
                             autoClose: 4000,

@@ -15,8 +15,8 @@ function WatchListDetails(props) {
             setIsLoading(true)
             const movieId = match.params.id
             api.get(`/watch-list/select/movie/${movieId}`)
-                .then(data => {
-                    if (data.data == null) {
+                .then(result => {
+                    if (!result.data) {
                         toast.warning(notificationText('fas fa-exclamation-triangle', 'No data available'), {
                             position: "top-right",
                             autoClose: 4000,
@@ -30,15 +30,15 @@ function WatchListDetails(props) {
                         }, 2000);
                         
                     } else {
-                        setModel(data.data)
-                        const formattedGenreList = data.data.Genre.split(',').map(genre => genre.trim())
+                        setModel(result.data)
+                        const formattedGenreList = result.data.Genre.split(',').map(genre => genre.trim())
                         setGenreList(formattedGenreList)
                         setIsLoading(false)
                     }
                     
                 })
                 .catch(() => {
-                    setIsLoading(true);
+                    setIsLoading(false);
                 })
         }
 
