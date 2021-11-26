@@ -1,6 +1,20 @@
-const mongoose = require('mongoose');
+import { Schema, model, Document } from 'mongoose';
+interface Movie extends Document {
+    imdbID: string;
+    title: string;
+    year: string;
+    rated: string;
+    released: string;
+    runtime: string;
+    genre: string;
+    director: string;
+    actors: string;
+    plot: string;
+    poster: string;
+    imdbRating: string;
+}
 
-const WatchListSchema = new mongoose.Schema({
+const WatchListSchema = new Schema<Movie>({
     imdbID: {type: String, required: true},
     Title: {type: String, required: true},
     Year: {type: String, required: true},
@@ -15,4 +29,4 @@ const WatchListSchema = new mongoose.Schema({
     imdbRating: {type: String, required: true},
 })
 
-module.exports = mongoose.model('WatchList', WatchListSchema)
+export default model('WatchList', WatchListSchema);
